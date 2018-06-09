@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import{NavController} from 'ionic-angular';
 import{AngularFireModule} from 'angularfire2';
-import { AngularFireDatabase, FirebaseListObservable } from "angularfire2/database-deprecated";
+import {FirebaseListObservable } from "angularfire2/database-deprecated";
+import { AngularFireDatabaseModule , AngularFireDatabase  } from 'angularfire2/database';
 import { HomePage } from '../home/home';
 // import { error } from 'selenium-webdriver';
 // import { NgModule } from '@angular/core';

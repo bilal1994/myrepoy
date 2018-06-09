@@ -15,10 +15,10 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 // import { FirebaseListObservable } from "angularfire2/database-deprecated";
 import { AngularFireModule } from 'angularfire2';
-import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { KidServicesProvider } from '../providers/kid-services/kid-services';
 import { KidsConfig } from '../model/kidsDB';
-import { AngularFireDatabase, FirebaseListObservable } from "angularfire2/database-deprecated";
+import { FirebaseListObservable } from "angularfire2/database-deprecated";
+import { AngularFireDatabaseModule , AngularFireDatabase  } from 'angularfire2/database';
 
 
 export const fireconfig = {
@@ -38,7 +38,7 @@ export const fireconfig = {
     TabsPage,
     AdminPage,
     FamilyPage,
-    AngularFireDatabase,
+
   ],
   imports: [
     BrowserModule,
@@ -54,14 +54,33 @@ export const fireconfig = {
     AboutPage,
     HomePage,
     TabsPage,
-
+    FamilyPage,
     AdminPage,
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    KidServicesProvider
+    KidServicesProvider,
+    AngularFireDatabase,
   ]
 })
 export class AppModule {}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
